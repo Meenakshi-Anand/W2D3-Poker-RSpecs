@@ -4,6 +4,16 @@ class Array
     self.my_uniq
   end
   
+  def two_sum
+    results = [] 
+    size.times.each do |start| 
+      (start + 1...size).each do |stop|
+        results << [start, stop] if self[start] + self[stop] == 0 
+      end
+    end
+    results     
+  end 
+  
   protected
    
   def my_uniq
@@ -13,5 +23,8 @@ class Array
     end
     results  
   end
-    
+  
+  
 end 
+
+
