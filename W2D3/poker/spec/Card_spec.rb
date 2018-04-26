@@ -19,9 +19,9 @@ describe "Card" do
       expect{Card.new("123213", "clovers")}.to raise_error("Error, improper value")
     end 
     
-    # it "returns an error when passed an improper suit" do 
-    #   expect{Card.new("A", "abcdef")}.to raise_error("Error, improper suit")
-    # end 
+    it "returns an error when passed an improper suit" do 
+      expect{Card.new("A", "abcdef")}.to raise_error("Error, improper suit")
+    end 
     
   end 
   
