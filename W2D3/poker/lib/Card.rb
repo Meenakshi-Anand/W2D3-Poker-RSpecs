@@ -7,8 +7,7 @@ class Card
   
   def initialize(value_input = random_value, suit_input = random_suit)
      raise "Error, improper value" unless VALUES.keys.include?(value_input)
-     
-     # raise "Error, improper suit." unless SUITS.include?(suit_input)
+     raise "Error, improper suit" unless SUITS.include?(suit_input)
     @suit = suit_input
     @value = value_input 
   end
@@ -29,4 +28,7 @@ class Card
     VALUES[@value] 
   end  
   
+  def inspect
+    {"value" => value, "suit" => @suit}.inspect   
+  end 
 end 
